@@ -24,7 +24,7 @@ function App() {
           Grab first part of the city name and check against the current search string to only dynamically show searched for elements.
         */}
         {WeatherData.map((location) => {
-          if(search == location.city.substring(0, search.length).toLowerCase()) return <WeatherDisplay city={location.city} temperature={location.temperature} weather={location.weather}></WeatherDisplay>;
+          if(search == location.city.substring(0, search.length).toLowerCase()) return <WeatherDisplay key={location.city} city={location.city} temperature={location.temperature} weather={location.weather}></WeatherDisplay>;
         })}
       </div>
     </>
